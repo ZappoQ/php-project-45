@@ -1,0 +1,22 @@
+{
+    "name": "hexlet/code",
+    "description": "A set of brain games implemented in PHP",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dom",
+            "email": "dinisvalee@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "bin": [
+      "bin/brain-games"
+    ]
+}
