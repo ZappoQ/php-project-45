@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Hexlet\\Code\\": "src/"
+            "BrainGames\\": "src/"
         }
     },
     "authors": [
@@ -15,8 +15,10 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.13.0"
+    },
     "bin": [
-      "bin/brain-games"
+        "bin/brain-games"
     ]
 }
