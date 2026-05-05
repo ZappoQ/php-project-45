@@ -2,13 +2,12 @@
 
 namespace BrainGames;
 
-use function cli\line;
-use function cli\prompt;
-
 function hello() {
-    line('Welcome to the Brain Game!');
 
-    $name = prompt('May I have your name?');
+    echo 'Welcome to the Brain Game!' . PHP_EOL;
 
-    line("Hello, %s!", $name);
+    echo 'May I have your name? ';
+    $name = trim(fgets(STDIN));
+
+    echo 'Hello, ' . $name . '!' . PHP_EOL;
 }
