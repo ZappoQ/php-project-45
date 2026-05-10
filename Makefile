@@ -15,3 +15,5 @@ lint:
 brain-even:
 	./bin/brain-even
 
+brain-calc:
+	php bin/brain-calc

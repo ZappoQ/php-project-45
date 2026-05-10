@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/Games.php';
+
+use function BrainGames\Engine\runGame;
+use function BrainGames\Games\CalcGame\generateQuestion;
+
+echo "Welcome to the Brain Games!\n";
+echo "May I have your name? ";
+$name = trim(fgets(STDIN));
+echo "Hello, $name!\n";
+
+runGame('BrainGames\Games\CalcGame\generateQuestion', $name);
