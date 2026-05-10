@@ -2,7 +2,8 @@
 
 namespace BrainGames;
 
-function hello() {
+function hello()
+{
 
     echo 'Welcome to the Brain Game!' . PHP_EOL;
 

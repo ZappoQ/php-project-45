@@ -8,3 +8,10 @@ brain-games:
 
 validate:
 	composer validate
+
+lint:
+	@composer exec --verbose phpcs -- --standard=PSR12 /Users/dom/php-project-45
+
+brain-even:
+	./bin/brain-even
+
