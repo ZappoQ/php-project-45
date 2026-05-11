@@ -1,41 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-function isEven($number) {
-    return $number % 2 == 0;
-}
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/EvenGame.php';
 
-function getUserInput() {
-    $handle = fopen("php://stdin", "r");
-    $input = trim(fgets($handle));
-    fclose($handle);
-    return $input;
-}
+use function BrainGames\Engine\runGame;
+use function BrainGames\Games\EvenGame\generateQuestion;
 
-echo "Welcome to the Brain Games!\n";
-echo "May I have your name? ";
-$name = getUserInput();
-echo "Hello, $name!\n";
-echo "Answer 'yes' if the number is even, otherwise answer 'no'.\n";
+$gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-$correctAnswers = 0;
-$maxAnswers = 3;
-
-while ($correctAnswers < $maxAnswers) {
-    $randomNumber = rand(1, 100);
-    echo "Question: $randomNumber\n";
-    echo "Your answer: ";
-    $userAnswer = getUserInput();
-
-    $rightAnswer = isEven($randomNumber) ? 'yes' : 'no';
-
-    if ($userAnswer === $rightAnswer) {
-        echo "Correct!\n";
-        $correctAnswers++;
-    } else {
-        echo "'$userAnswer' is wrong answer ;(. Correct answer was '$rightAnswer'. Let's try again, $name!\n";
-        exit(1);
-    }
-}
-
-echo "Congratulations, $name!\n";
+runGame($gameDescription, generateQuestion(...));

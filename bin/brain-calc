@@ -2,14 +2,11 @@
 <?php
 
 require_once __DIR__ . '/../src/Engine.php';
-require_once __DIR__ . '/../src/Games.php';
+require_once __DIR__ . '/../src/CalcGames.php';
 
 use function BrainGames\Engine\runGame;
-use function BrainGames\Games\CalcGame\generateQuestion;
+use function BrainGames\Games\CalcGames\generateQuestion;
 
-echo "Welcome to the Brain Games!\n";
-echo "May I have your name? ";
-$name = trim(fgets(STDIN));
-echo "Hello, $name!\n";
+$gameDescription = 'What is the result of the expression?';
 
-runGame('BrainGames\Games\CalcGame\generateQuestion', $name);
+runGame($gameDescription, generateQuestion(...));

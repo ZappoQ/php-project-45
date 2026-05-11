@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/GcdGame.php';
+
+use function BrainGames\Engine\runGame;
+use function BrainGames\Games\GcdGame\generateQuestion;
+
+$gameDescription = 'Find the greatest common divisor of given numbers.';
+
+runGame($gameDescription, generateQuestion(...));

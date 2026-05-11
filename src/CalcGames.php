@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Games\CalcGame;
+namespace BrainGames\Games\CalcGames;
 
 function generateQuestion()
 {
@@ -16,5 +16,5 @@ function generateQuestion()
             '*' => $a * $b,
         };
 
-        return [$question, $answer];
+        return [$question, (string) $answer];
 }

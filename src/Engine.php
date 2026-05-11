@@ -2,19 +2,26 @@
 
 namespace BrainGames\Engine;
 
-function runGame($gameFunc, $name, $rounds = 3)
+function runGame($gameDescription, $generateQuestion)
 {
-        $score = 0;
+    echo "Welcome to the Brain Games!\n";
+    echo "May I have your name? ";
+    $name = trim(fgets(STDIN));
+    echo "Hello, $name!\n";
+
+    echo $gameDescription . "\n";
+
+    $rounds = 3;
 
     for ($i = 0; $i < $rounds; $i++) {
-        list($question, $correctAnswer) = $gameFunc();
+        [$question, $correctAnswer] = $generateQuestion();
+
         echo "Question: $question\n";
         echo "Your answer: ";
         $userAnswer = trim(fgets(STDIN));
 
-        if ($userAnswer === (string)$correctAnswer) {
+        if ($userAnswer === $correctAnswer) {
             echo "Correct!\n";
-            $score++;
         } else {
             echo "'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'.\n";
             echo "Let's try again, $name!\n";
@@ -22,7 +29,5 @@ function runGame($gameFunc, $name, $rounds = 3)
         }
     }
 
-    if ($score === $rounds) {
-        echo "Congratulations, $name!\n";
-    }
+    echo "Congratulations, $name!\n";
 }
