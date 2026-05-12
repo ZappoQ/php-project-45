@@ -2,7 +2,7 @@
 <?php
 
 require_once __DIR__ . '/../src/Engine.php';
-require_once __DIR__ . '/../src/EvenGame.php';
+require_once __DIR__ . '/../src/Games/EvenGame.php';
 
 use function BrainGames\Engine\runGame;
 use function BrainGames\Games\EvenGame\generateQuestion;

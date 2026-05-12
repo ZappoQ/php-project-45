@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../src/Engine.php';
+require_once __DIR__ . '/../src/Games/ProgressionGame.php';
+
+use function BrainGames\Engine\runGame;
+use function BrainGames\Games\ProgressionGame\generateRound;
+
+$gameDescription = 'What number is missing in the progression?';
+
+runGame($gameDescription, generateRound(...));
