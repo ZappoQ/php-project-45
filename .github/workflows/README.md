@@ -55,3 +55,14 @@ The hexlet-check.yml file is responsible for running these tests - do not delete
 3. Нужно определить пропущенное число.
 
 📹[Игра "Арифметическая прогрессия"](https://asciinema.org/a/flbCzUb8XU3raFGQ)
+
+### 6. Простое число (brain-prime)
+
+Пользователю показывается случайное число. Нужно ответить `yes`, если число простое, или `no`, если составное.
+
+Как запустить игру "Простое число"
+1. Запустите игру: `make brain-prime`
+2. Ввод имени.
+3. Нужно ответить `yes`, если число простое, или `no`, если составное.
+
+📹[Игра "Простое число"](https://asciinema.org/a/3Wx06mqTvdi65O2O)
