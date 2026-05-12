@@ -2,10 +2,10 @@
 <?php
 
 require_once __DIR__ . '/../src/Engine.php';
-require_once __DIR__ . '/../src/Games/CalcGames.php';
+require_once __DIR__ . '/../src/Games/CalcGame.php';
 
 use function BrainGames\Engine\runGame;
-use function BrainGames\Games\CalcGames\generateQuestion;
+use function BrainGames\Games\CalcGame\generateQuestion;
 
 $gameDescription = 'What is the result of the expression?';
 
